@@ -55,11 +55,11 @@ export default function Services() {
           {services.map((service, index) => (
             <div key={index} className="card group hover:shadow-2xl">
               <div className="p-8">
-                <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300 text-center">
                   {service.icon}
                 </div>
                 
-                <h3 className="text-2xl font-heading font-bold text-primary-900 mb-3">
+                <h3 className="text-2xl font-heading font-bold text-primary-900 mb-3 text-center">
                   {service.title}
                 </h3>
                 

@@ -31,7 +31,7 @@ export default function Header() {
       isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
     }`}>
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 relative">
+        <div className="flex items-center justify-center md:justify-between h-20 relative">
           {/* Desktop Navigation - Left */}
           <div className="hidden md:flex items-center space-x-6 flex-1">
             {navigation.slice(0, 3).map((item) => (
@@ -46,7 +46,7 @@ export default function Header() {
           </div>
 
           {/* Logo - Center */}
-          <div className="flex items-center absolute left-1/2 transform -translate-x-1/2 md:relative md:left-auto md:transform-none">
+          <div className="flex items-center">
             <div className="relative w-14 h-14 bg-white rounded-full p-1 shadow-sm">
               <Image
                 src={getImagePath("/imagenes/logo.png")}
@@ -86,7 +86,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+            className="md:hidden absolute right-4 p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 z-10"
           >
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               {isMobileMenuOpen ? (
