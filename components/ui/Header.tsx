@@ -31,27 +31,10 @@ export default function Header() {
       isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
     }`}>
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <div className="flex items-center">
-            <div className="relative w-12 h-12 bg-white rounded-full p-1 shadow-sm">
-              <Image
-                src={getImagePath("/imagenes/logo.png")}
-                alt="Dr. Dayel Rosales"
-                width={48}
-                height={48}
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <div className="ml-3">
-              <h1 className="text-lg font-bold text-primary-900">Dr. Dayel Rosales</h1>
-              <p className="text-xs text-text-secondary">Cirujano Maxilofacial</p>
-            </div>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
+        <div className="flex items-center justify-between h-20 relative">
+          {/* Desktop Navigation - Left */}
+          <div className="hidden md:flex items-center space-x-6 flex-1">
+            {navigation.slice(0, 3).map((item) => (
               <a
                 key={item.name}
                 href={item.href}
@@ -62,13 +45,39 @@ export default function Header() {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* Logo - Center */}
+          <div className="flex items-center absolute left-1/2 transform -translate-x-1/2 md:relative md:left-auto md:transform-none">
+            <div className="relative w-14 h-14 bg-white rounded-full p-1 shadow-sm">
+              <Image
+                src={getImagePath("/imagenes/logo.png")}
+                alt="Dr. Dayel Rosales"
+                width={56}
+                height={56}
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <div className="ml-3">
+              <h1 className="text-xl font-bold text-primary-900">Dr. Dayel Rosales</h1>
+              <p className="text-sm text-text-secondary">Cirujano Maxilofacial</p>
+            </div>
+          </div>
+
+          {/* Desktop Navigation - Right */}
+          <div className="hidden md:flex items-center space-x-6 flex-1 justify-end">
+            {navigation.slice(3).map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-text-secondary hover:text-primary-600 transition-colors duration-200 font-medium"
+              >
+                {item.name}
+              </a>
+            ))}
             <a
               href="https://wa.me/528713860450"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-primary"
+              className="btn btn-primary ml-4"
             >
               Agendar Cita
             </a>
