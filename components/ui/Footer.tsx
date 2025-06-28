@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { getImagePath } from '@/lib/utils'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -13,7 +14,7 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-4">
               <div className="relative w-12 h-12 bg-gray-800 rounded-full p-1.5">
                 <Image
-                  src="/imagenes/logo.png"
+                  src={getImagePath("/imagenes/logo.png")}
                   alt="Dr. Dayel Rosales"
                   width={48}
                   height={48}

@@ -2,25 +2,26 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import { getImagePath } from '@/lib/utils'
 
 const cases = [
   {
     title: "Cirugía Ortognática - Caso 1",
     description: "Corrección de mordida clase III con avance maxilar",
-    before: "/imagenes/ortognatica antes .png",
-    after: "/imagenes/ortognatica despues.png"
+    before: getImagePath("/imagenes/ortognatica antes .png"),
+    after: getImagePath("/imagenes/ortognatica despues.png")
   },
   {
     title: "Asimetría Facial",
     description: "Corrección de asimetría mandibular mediante cirugía ortognática",
-    before: "/imagenes/asimetria antes.png",
-    after: "/imagenes/asimetria despues.png"
+    before: getImagePath("/imagenes/asimetria antes.png"),
+    after: getImagePath("/imagenes/asimetria despues.png")
   },
   {
     title: "Cirugía Ortognática - Caso 2",
     description: "Corrección de retrognatismo mandibular",
-    before: "/imagenes/orto2 antes.png",
-    after: "/imagenes/orto 2 despues.png"
+    before: getImagePath("/imagenes/orto2 antes.png"),
+    after: getImagePath("/imagenes/orto 2 despues.png")
   }
 ]
 

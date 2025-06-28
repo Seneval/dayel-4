@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { getImagePath } from '@/lib/utils'
 
 export default function Hero() {
   return (
@@ -55,7 +56,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-3xl" />
             <div className="relative h-full rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="/imagenes/acercade.jpg"
+                src={getImagePath("/imagenes/acercade.jpg")}
                 alt="Dr. Dayel Rosales"
                 fill
                 className="object-cover"

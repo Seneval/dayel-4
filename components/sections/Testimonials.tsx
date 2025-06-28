@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import { getImagePath } from '@/lib/utils'
 
 const testimonials = [
   {
@@ -9,35 +10,35 @@ const testimonials = [
     treatment: "Cirugía Ortognática",
     content: "El Dr. Dayel cambió mi vida por completo. Después de años sufriendo problemas de mordida, finalmente puedo comer y sonreír con confianza. Su profesionalismo y calidez humana hicieron todo el proceso mucho más llevadero.",
     rating: 5,
-    image: "/imagenes/testimonial2.jpg"
+    image: getImagePath("/imagenes/testimonial2.jpg")
   },
   {
     name: "Roberto Martínez",
     treatment: "Implantes Dentales",
     content: "Excelente atención desde el primer momento. Los implantes quedaron perfectos y el proceso fue mucho menos complicado de lo que esperaba. El Dr. Rosales explica todo con detalle y genera mucha confianza.",
     rating: 5,
-    image: "/imagenes/testimonial1.jpg"
+    image: getImagePath("/imagenes/testimonial1.jpg")
   },
   {
     name: "Ana López",
     treatment: "Rinoplastia",
     content: "Estoy fascinada con los resultados. El Dr. Dayel logró exactamente lo que quería: una nariz natural que armoniza con mi rostro. La recuperación fue rápida y sin complicaciones.",
     rating: 5,
-    image: "/imagenes/testimonial3.jpg"
+    image: getImagePath("/imagenes/testimonial3.jpg")
   },
   {
     name: "Carlos Rodríguez",
     treatment: "Bichectomía",
     content: "El procedimiento fue rápido y los resultados superaron mis expectativas. Mi rostro se ve más definido y juvenil. El seguimiento post-operatorio fue excelente.",
     rating: 5,
-    image: "/imagenes/testimonial4.jpg"
+    image: getImagePath("/imagenes/testimonial4.jpg")
   },
   {
     name: "Laura Hernández",
     treatment: "Cirugía de Terceros Molares",
     content: "Tenía mucho miedo pero el Dr. Rosales y su equipo me tranquilizaron completamente. La extracción fue indolora y la recuperación muy rápida. Altamente recomendado.",
     rating: 5,
-    image: "/imagenes/testimonial5.jpg"
+    image: getImagePath("/imagenes/testimonial5.jpg")
   }
 ]
 
